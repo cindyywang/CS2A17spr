@@ -1,0 +1,17 @@
+Enter price (Apple per lbs): Enter weight: Enter price (Cereal): Enter quantity: Enter price (Bread): Enter quantity: ------------------------------------
+SaveMart Receipt
+123 Main Street
+San Jose CA 95135
+
+Honey Crisp Apples            4.00
+  2.00 lbs at 2.00 per lb
+Honey Bunches and Oats        4.00
+  Quantity 2
+Wonder Bread                  4.00
+  Quantity 2
+
+SUBTOTAL                      12.00
+CLUBCARD Saving 5%            0.60
+TAX 8.75%                     1.00
+TOTAL                         12.40
+------------------------------------
