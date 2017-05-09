@@ -29,7 +29,7 @@ int main ( )
          //while loop
          while ( getline ( cin, inputLine ) )
          {
-            for ( int i = 0; i < inputLine.length ( ) ; i++)
+            for ( int i = 0; i < inputLine.length ( ) ; i++ )
             {
                char currChar = inputLine[i];
                
