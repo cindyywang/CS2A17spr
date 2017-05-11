@@ -1,0 +1,71 @@
+body {
+   margin: 0;
+   font-family: sans-serif;
+   font-size: 200%;
+}
+
+#nav-bar {
+   position: fixed;
+   width: 100%;
+   /*normally*/
+   height: 5rem;
+   /*em will scale along with the font, good for mobile, but there might be
+   multiple nested font to confuse em 
+   rem will scale with the font inside html, there are only font in body in html*/ 
+   background-color: #123;/*short hand for #112233*/
+   background-color: rgb(32,64,128);
+   text-align: center;
+}
+
+#nav-bar > span {
+   position: relative;
+   display: inline-block;
+   /*using block is no different than div*/
+   width: 8rem;
+   height: 2.8rem;/*the height of the container*/
+   line-height: 2.8rem;/*vertical center*/
+   font-size: 150%;
+   background-color: navy;
+   border: 2px solid transparent;
+   border-bottom-color: red;
+   color: white;
+   cursor: pointer;
+
+}
+
+#nav-bar > span::before {
+/*space after before is crutial*/
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 8rem;
+   height: 0.2rem;
+   background-color: red;
+   content: '';
+}
+
+#nav-bar > span::hover::before {
+   background-color: red;
+}
+#content {
+   position: absolute;
+   top: 3rem;
+   left: 0;
+   right: 0;
+}
+
+#content > div {
+   position: absolute;
+   padding: 0.5rem;
+   top: 1rem;
+   width: calc(100%-3rem);
+   height: 60rem;
+   background-color: beige;
+
+}
+
+#content > #bio {
+   display: none;
+}
+
+
