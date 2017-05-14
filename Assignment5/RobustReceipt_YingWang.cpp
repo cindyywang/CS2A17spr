@@ -5,8 +5,10 @@ using namespace std;
 
 bool readValid(int& num);
 bool readValid(double& num);
-void showItem(string prodName, double prodPrice, double prodWeight, double
-prodTotal);
+void showItem(string prodName, 
+              double prodPrice, 
+              double prodWeight, 
+              double prodTotal);
 
 int main()
 {  
@@ -105,7 +107,7 @@ int main()
 
 bool readValid(int& num)
 {
-   if(num>0)
+   if(num > -1)
       return true;
    else
       return false;   
@@ -113,7 +115,7 @@ bool readValid(int& num)
 
 bool readValid(double& num)
 {
-   if(num>0)
+   if(num >= 0.0)
       return true;
    else
       return false;
