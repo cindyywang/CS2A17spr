@@ -35,7 +35,8 @@ int main()
    if(istringstream(firstline) >> items)
    {
       if(readValid(items))
-      {   
+      {  
+         cout << "------------------------------------" << endl;
          cout << "SaveMart Receipt" << endl;
          cout << "123 Main Street" << endl;
          cout << "San Jose CA 95135" << endl << endl;
@@ -90,6 +91,7 @@ int main()
          cout << "CLUBCARD Saving 5%              " << saving << endl;
          cout << "TAX 8.75%                       " << tax << endl;
          cout << "TOTAL                          " << total << endl;
+         cout << "------------------------------------" << endl;
       }
       else
       {
@@ -106,7 +108,7 @@ int main()
 }
 
 bool readValid(int& num)
-{
+{  
    if(num > -1)
       return true;
    else
@@ -131,6 +133,7 @@ void showItem(string prodName, double prodPrice, double prodWeight, double prodT
 /*
 --- Run 1 ---
 CindyWs:Assignment5 ying2ra$ ./a.out < input-bad1.txt
+------------------------------------
 SaveMart Receipt
 123 Main Street
 San Jose CA 95135
@@ -142,6 +145,7 @@ Bad Data. Positive expected. Got: -3.30
 
 --- Run 2 ---
 CindyWs:Assignment5 ying2ra$ ./a.out < input-bad2.txt
+------------------------------------
 SaveMart Receipt
 123 Main Street
 San Jose CA 95135
@@ -160,6 +164,7 @@ Bad Data. Positive number expected. Got: -3
 
 --- Run 4 ---
 CindyWs:Assignment5 ying2ra$ ./a.out < input-good1.txt
+------------------------------------
 SaveMart Receipt
 123 Main Street
 San Jose CA 95135
@@ -177,9 +182,11 @@ SUBTOTAL                       12.22
 CLUBCARD Saving 5%              0.71
 TAX 8.75%                       1.17
 TOTAL                          12.22
+------------------------------------
 
 --- Run 5 ---
 CindyWs:Assignment5 ying2ra$ ./a.out < input-good2.txt
+------------------------------------
 SaveMart Receipt
 123 Main Street
 San Jose CA 95135
@@ -209,9 +216,11 @@ SUBTOTAL                       28.26
 CLUBCARD Saving 5%              1.63
 TAX 8.75%                       2.71
 TOTAL                          28.26
+------------------------------------
 
 --- Run 6 ---
 CindyWs:Assignment5 ying2ra$ ./a.out < input-good3.txt
+------------------------------------
 SaveMart Receipt
 123 Main Street
 San Jose CA 95135
@@ -235,5 +244,6 @@ SUBTOTAL                       31.15
 CLUBCARD Saving 5%              1.80
 TAX 8.75%                       2.99
 TOTAL                          31.15
+------------------------------------
 */
 
