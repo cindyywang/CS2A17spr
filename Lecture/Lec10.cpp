@@ -4,6 +4,8 @@ left is a location
 <lhs> = <rhs>
 var      exp
 
+
+
 Overloading
 ???
 double avg(double a1, double a2);
@@ -12,7 +14,9 @@ int avg(int a1, int a2, int a3);
 can't call by reference
 
 Signature
-function name+arg list
+function name+arg list(# and types of arg) but not including return and &
+
+However, func declaration/prototype includes return 
 foo(2,3)
 if foo(int,int)doesn't exist
 foo(double,double)

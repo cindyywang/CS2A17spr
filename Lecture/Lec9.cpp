@@ -53,7 +53,7 @@ static
 *.so
 
 Programmer defined functions
-function declaratio
+function declaration
 function prototype
 
 function definition
