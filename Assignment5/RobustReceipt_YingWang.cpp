@@ -9,7 +9,9 @@ void showItem(string prodName,
               double prodPrice, 
               double prodWeight, 
               double prodTotal);
+//comment here
 
+//more comment in the body
 int main()
 {  
    int items = 0;
@@ -58,12 +60,15 @@ int main()
             else 
                exit(1);
       }
+      cout << endl;
+      cout << "SUBTOTAL                       " << total << endl;
       saving = CLUBCARD * total;
       total -= saving;
       tax = TAXRATE * total;
       total -= tax;
-         
-      cout << "SUBTOTAL                       " << total << endl;
+      
+      //cout << endl;
+      //cout << "SUBTOTAL                       " << total << endl;
       cout << "CLUBCARD Saving 5%              " << saving << endl;
       cout << "TAX 8.75%                       " << tax << endl;
       cout << "TOTAL                          " << total << endl;
@@ -122,10 +127,11 @@ void showItem(string prodName, double prodPrice, double prodWeight, double prodT
 {
    cout << left << setw(30) << prodName;
    cout << right << setw(6) << prodTotal << endl;
-   cout << "  " << prodWeight << " at " << prodPrice << endl << endl;
+   cout << "  " << prodWeight << " at " << prodPrice << endl;
 }
 
 /*
+//no space between showItem
 --- Run 1 ---
 CindyWs:Assignment5 ying2ra$ ./a.out < input-bad1.txt
 ------------------------------------
