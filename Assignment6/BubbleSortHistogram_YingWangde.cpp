@@ -8,10 +8,12 @@ int main()
    int count = 0;
 
    //parse every word as an element in string array word 
+   cout << "parse: " << endl;
    while( ! cin.eof())
    {
       string str;
       cin >> str;
+      cout << "str: " << str << " ; ";
       if(count < 250)
       {  
          //blindly change 1st char of every str to lower case
@@ -22,6 +24,9 @@ int main()
             word[count] = str;
             //count will be the total of elements 
             count++;
+            cout << "word[ " << count << " ] : " << word[count] << " ; ";
+            cout << "count: " << count << " ; ";
+            
          }
       }
       else
@@ -30,17 +35,33 @@ int main()
          exit(1);
       }
    }
+   cout << "end of parse" << endl;
    //Set count to be the max index
    count--;
 
    //bubble sort
+   //should only swap once
    //outer loop from 0 index to the one before max index
    //right most is always biggest
+   cout << "bubble sort: " << endl;
    for(int i = 0; i < count; i++)
    {  
-      //inner loop to the current biggest and swap if not right
+      /*
+      //index(i+1) can be no bigger than the max index
+      if((word[i] > word[i + 1]) && ((i + 1) <= count))
+      {  
+         //swap but & doesn't work for array?
+         
+         string temp;
+         temp = word[i + 1];
+         word[i + 1] = word[i];
+         word[i] = temp;
+      }
+      */
+      //inner loop from the one before current biggest to the left most
       for(int j = 0; j < count - i; j++)
       {
+         //j>0->j-1>=0
          if(word[j + 1] < word[j])
          {
             string temp;
@@ -48,16 +69,18 @@ int main()
             word[j] = word[j + 1];
             word[j + 1] = temp;
          }
+         cout << "word[ " << j << " ] : " << word[j] << " ; ";
+         cout << "word[ " << j+1 << " ] : " << word[j+1] << " ; ";
       } 
    }
- 
+   cout << "end of bubble sort" << endl;
    //print histogram
+   //repeatative code, i+1 handling needed
    //first one without endl
    cout << right << setw(15) << word[0];
    cout << ":" << " x";
-   //the rest
    //if a new word then endl before print it out
-   for(int i = 1; i < count + 1; i++)
+   for(int i = 1; i < count; i++)
    {
       if(word[i] != word[i - 1])
       {  
@@ -70,7 +93,17 @@ int main()
          cout << "x";
       }
    }
-   cout << endl;
+   //last one with endl
+  /* if(word[count] != word[count - 1])
+   {
+      cout << endl;
+      cout << right << setw(15) << word[count];
+      cout << ":" << " x" << endl;
+   }
+   else
+   {
+      cout  << "x" << endl;
+   }*/
    return 0;
 }
 
