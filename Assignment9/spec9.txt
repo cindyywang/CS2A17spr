@@ -1,0 +1,108 @@
+This assignment was locked Jun 21 at 11:59pm.
+In this assignment, we will use what we learned about Pointer and Dynamic Memory Allocation to implement a Doubly Linked List (Links to an external site.)Links to an external site..
+
+We have discussed Linked Lists in class; doubly linked list add a reverse pointer to each list node. 
+
+DLinkedList Class
+
+You will define a class called DLinkedList. You will implement the class by creating the data representation and implementing a few methods.
+
+Here is the class definition that you will fill in:
+
+// ---------------------
+// DLinkedList class
+// ---------------------
+class DLinkedList
+{
+public:
+   DLinkedList();
+   // Default constructor
+
+   ~DLinkedList();
+   // Frees the linked list
+
+   int getSize() const;
+   // length of list
+
+   void print(bool backwards = false) const;
+   // prints list forwards by default, and backwards if backwards is true
+ 
+   void add(int d);
+   // add d to list so list is kept in ascending order
+
+private:
+   // add any variables and helper functions
+};
+Additional Class
+
+You will additionally need a class to representation of the list node. This class is not visible to the outside world, so you can call it any name you like.
+
+The node should store a number (int) as data and point to previous and next nodes.
+
+TIP: Using the following friend declaration within the node class definition will allow DLinkedList object to access private member of the node directly.
+
+ friend class DLinkedList;
+ // friend class
+Type Definition
+
+For this assignment you are required to show use of "typedef". You may want to use it for a node pointer for example. 
+
+Type definitions go at the top of the program after "include" and "using" declarations. Since the node class will not be defined till later in the code, you will need to put a simple forward declaration before the typedef statement as below:
+
+class YourNodeClassName;
+Dynamic Memory Allocation
+
+You need to use the new operator to allocate node objects.
+
+You will also need to use the delete operator to free the memory allocated for the linked list. 
+
+Sorted List
+
+The add() method should insert the number in the list so that the list stays in ascending order.
+
+As discussed in class, this is the best done in 2 steps:
+
+loop over the list to find the position to insert at;
+insert new node by updating relevant pointers; handle cases of inserting before start and after end.
+Main Function
+
+Include the following definition as your main() function in your program. 
+
+// ---------------------
+// Main (driver)
+// ---------------------
+int main()
+{
+   DLinkedList myList;
+   int d;
+ 
+   // read ints and add to list
+   while (cin >> d)
+   {
+      cout << "Adding " << right << setw(5) << d << ": ";
+      myList.add(d);
+      myList.print();
+   }
+   // show final list
+   cout << "---------------" << endl;
+   cout << "Final Size: " << myList.getSize() << endl;
+   cout << "Forwards:   ";
+   myList.print();
+   cout << "Backwards:  ";
+   myList.print(true);
+
+   return 0;
+}
+Sample Input
+
+Run your program with input redirection from the following 3 sample files: 5nums.txtPreview the documentView in a new window, 10nums.txtPreview the documentView in a new window, and 20nums.txtPreview the documentView in a new window. An sample expected output for the first sample file is 5nums-output.txtPreview the documentView in a new window.
+
+Submission
+
+Include all the requirements mentioned above in your code.
+Comment your code appropriately.
+Use correct indentation.
+Minimize repeated code.
+Include the output of your program with the 3 sample files in a comment section at the bottom of your code.
+Lastly, upload the file DLinkedList_[your name].cpp .
+Happy Coding!
