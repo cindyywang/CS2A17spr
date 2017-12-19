@@ -1,0 +1,107 @@
+This assignment was locked May 24 at 11:59pm.
+The goal of this assignment is to use what you have learned about Functions, Parameter Passing and Output Formatting to update the previous version of the Receipt program.
+
+You will also use what you learned earlier about loops and error checking to make the program more robust.
+
+Create a program file called RobustReceipt_<yourname>.cpp; so if your name is Jane, your file will be RobustReceipt_Jane.cpp.
+
+Program Usage
+
+The program not will not prompt for any input. It can accept input through redirection from a input file. The input will contain (1) the number of items in the receipt and (2) details for each of the items consisting of name (string), price (double) and weight/quantity (double). See example input file below:
+
+% cat input-good1.txt
+3
+Honey Crisp Apples
+1.30
+2.0
+Captain Crunch
+3.5
+2
+Wonder Bread
+1.50
+3
+The program can than be run as follows.
+
+% RobustReceipt_Jane < input.good.txt
+------------------------------------
+SaveMart Receipt
+123 Main Street
+San Jose CA 95135
+
+Honey Crisp Apples              2.60
+  2.00 at 1.30
+Captain Crunch                  7.00
+  2.00 at 3.50
+Wonder Bread                    4.50
+  3.00 at 1.50
+
+SUBTOTAL                       14.10
+CLUBCARD Saving 5%              0.71
+TAX 8.75%                       1.17
+TOTAL                          14.57
+------------------------------------
+New Functions
+
+Here are the prototypes for the three functions you will create in your programs:
+
+bool readValid(int& num);
+// reads a line, checks if it's a valid int, and ensures it's positive
+// returns false in case of any error, true for a valid int
+bool readValid(double& num);
+// reads a line, checks if it's a valid double, and ensures it's positive
+// returns false in case of any error, true for a valid double
+void showItem(string prodName, double prodPrice, double prodWeight, double prodTotal);
+// prints a line item for product, eg.
+// Honey Crisp Apples 2.60
+//   2.00 at 1.30
+You should use these functions in the loop for processing the individual items. Note:
+
+the call-by-reference parameters
+overloading of the function name readValid
+Error Checking
+
+If the program experiences any of the errors below, it should exit with a code of 1 (i.e. "exit(1)").
+
+When trying to read int or double, the program should show the following error message if it detects a non-number:
+
+Bad Data. Double expected. Got: abc
+or
+
+Bad Data. Integer expected. Got: abc
+If the program detects a negative number, it should show the following:
+
+Bad Data. Positive number expected. Got: -3.30
+Formating Output
+
+The width of the receipt is 36 chars.
+
+The width of the item name ("Captain Crunch") field below is 30 chars; it is left-justified. The width of the product total price (6.60) field below is 6 chars; it is right-justified.
+
+Captain Crunch                  6.60
+  2.00 at   3.30
+You can use left, right and setw() to left-justify, right-justify, and set the width of a field.
+
+Eg. the following code left-justifies the contents of variable myName and pads it with spaces on the right so that the total field width is 24 chars.
+
+#include <iomanip>
+...
+cout << left << setw(24) << myName;
+The above will be discussed in class.
+
+Sample Input
+
+Please use the following sample input files to test your program: 
+
+input-bad1.txtPreview the documentView in a new window, input-bad2.txtPreview the documentView in a new window, input-bad3.txtPreview the documentView in a new window
+input-good1.txtPreview the documentView in a new window, input-good2.txtPreview the documentView in a new window, input-good3.txtPreview the documentView in a new window
+ Submission
+
+Make sure to include function prototypes before main() and function definitions after main().
+Make sure to use "exit(1)" in case of errors mentioned above.
+Comment your code appropriately.
+Choose the right data types (int, doubles, strings, constants, etc.).
+Use correct indentation.
+Minimize repeated code.
+Include the output of each of the sample input files in a comment section at the bottom of your code.
+Lastly, upload the file RobustReceipt_Jane.cpp (no need to convert to txt).
+ Happy Coding!
