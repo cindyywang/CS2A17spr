@@ -523,7 +523,7 @@ Player 2 row: Player 2 col:
 +---+---+---+
 | X |   |   |
 +---+---+---+
-Player 1 row: a
+Player 1 row: Bad Data (a). Ignoring.
 Player 1 col:
 +---+---+---+
 | O | X |   |
