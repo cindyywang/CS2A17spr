@@ -1,0 +1,79 @@
+This assignment was locked May 10 at 11:59pm.
+The goal of this assignment is to use what we have learned about Boolean Expressions and Conditionals. The program that you write is a Math Quiz that presents the user with a simple problem to solve. It reports back if the guessed value is correct or gives the right answer if it is not correct.
+
+Please do the following:
+
+You final submitted file should be called MathQuiz_[YourName].cpp file; so if your name is Jane, the file is MathQuiz_Jane.cpp (I will use this name in the example below, but please be sure the change this to your name).
+The green entries below represent input at the keyboard.
+The program first prompts for a type of problem as below.
+Welcome to Math Quiz
+What are we practicing?
+[1] Addition
+[2] Substraction
+[3] Multiplication
+[4] Division (quotient)
+[5] Division (remainder)
+Choice: 
+The user will enter 1 to 5 to choose the type of problem. You can assume the user will always enter an int. If the user picks an incorrect value, show an error as below.
+Welcome to Math Quiz
+What are we practicing?
+[1] Addition
+[2] Substraction
+[3] Multiplication
+[4] Division (quotient)
+[5] Division (remainder)
+Choice: 6
+Not a valid choice.
+Once a problem type is chosen, present a question with that operation on 2 random numbers (from 1 to 10).
+Take the guessed answer as input and verify the result. An example for addition with incorrect entry is:
+Welcome to Math Quiz
+What are we practicing?
+[1] Addition
+[2] Substraction
+[3] Multiplication
+[4] Division (quotient)
+[5] Division (remainder)
+Choice: 1
+What is 9 + 5? 13
+Nope, it is 14.
+An example for multiplication with correct entry is:
+Welcome to Math Quiz
+What are we practicing?
+[1] Addition
+[2] Substraction
+[3] Multiplication
+[4] Division (quotient)
+[5] Division (remainder)
+Choice: 3
+What is 5 * 9? 45
+That is exactly right!
+A division remainder example is:
+Welcome to Math Quiz
+What are we practicing?
+[1] Addition
+[2] Substraction
+[3] Multiplication
+[4] Division (quotient)
+[5] Division (remainder)
+Choice: 5
+What is the remainder for 9 / 4? 1
+That is exactly right!
+Use a Switch statement at the top level for Math operation choice (add, subtract, etc.).
+Use at least one Boolean variable. For example, you can use a variable isCorrect to be true if the guessed answer was correct and false if it was not.
+Minimize repeated code. For example, there should be only one statement in the code the prints "That is exactly right!" (or the one that prints "Nope it is ...").
+You will need to use the rand() function to generate a random number between 1 and 10 as below. Note that you will need to include the cstdlib.
+#include <cstdlib>
+#include <ctime>
+...
+// sets the random seed to current time
+srand(time(NULL)); // put once after variable declarations
+...
+int num;
+num = (rand()%10)+1; // now holds a random number between 1 and 10
+You will need to use the call "return 1;" in case of error.
+The program is required to be well indented (use 3 spaces).
+The program should have enough comments so a different programmer can completely understand it. But also, you do not want to over-do it by commenting every line.
+Test your program with a variety of different input values.
+Add output of sample runs in a comments section at the end of the source code; include 3 runs for (1) incorrect choice, (2) correct answer, and (3) incorrect answer.
+Lastly, upload the file MathQuiz_JaneDoe.cpp (or the MathQuiz_JaneDoe.txt).
+Happy Coding!
