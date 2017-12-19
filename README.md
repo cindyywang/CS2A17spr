@@ -1,5 +1,5 @@
 # CS2A "OBJECT-ORIENTED PROGRAMMING METHODOLOGIES IN C++":
-Assignments and lecture notes
+Assignments, spec of assignments and lecture notes
 
 Assignments
 1. Cout and Arithmatic Calculation 
