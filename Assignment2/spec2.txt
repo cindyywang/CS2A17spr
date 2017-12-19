@@ -1,0 +1,49 @@
+This assignment was locked May 10 at 11:59pm.
+The goal of this assignment is to use what we learned about variables, numeric data types and input/output so far. The program you write will read information about three products from the keyboard and output a receipt. The last programming assignment may be a good starting point for this one.
+
+Please do the following:
+
+Name your program file Receipt_[YourName].cpp file; so if your name is Jane Doe, the file is Receipt_JaneDoe.cpp (I will use this name in the example below, but please be sure the change this to your name).
+Write a program that reads the price and amount (weight or quantity) of 3 products shown below from the keyboard and prints a receipt by calculating the subtotal, subtracting 5% club card savings, and adding 8.75% tax to calculate the total.
+ Technical requirements:
+
+Choose the right data types (stick to int and double) for the variables you use.
+Use constant variables for club card and tax percentages.
+Use augmented assignments  "+=", "-=", "*=", etc.
+Use comments to explain any relevant code.
+Show computed subtotals and totals with 2 digits after the decimal.
+Add output of a run in a comments section at the end of the source code.
+Ensure the code is indented correctly.
+The output must match exactly to what is shown here; so, note all the spaces, dashes, blank lines etc. shown below.
+ 
+
+The output should look as follows (the green entries represent input entered):
+Enter price (Apple per lbs): 1.30
+Enter weight: 2.0
+Enter price (Cereal): 3.45
+Enter quantity: 2
+Enter price (Bread): 1.50
+Enter quantity: 3
+------------------------------------
+SaveMart Receipt
+123 Main Street
+San Jose CA 95135
+
+Honey Crisp Apples            2.60
+  2.00 lbs at 1.30 per lb
+Honey Bunches and Oats        6.90   
+  Quantity 2
+Wonder Bread                  4.50
+  Quantity 3
+
+SUBTOTAL                      14.00
+CLUBCARD Saving 5%            0.70
+TAX 8.75%                     1.16
+TOTAL                         14.46
+------------------------------------
+TIP: As discussed in class, get 2 digits after decimal point for doubles by doing the following:
+cout.setf(ios::fixed);
+cout.setf(ios::showpoint);
+cout.precision(2);
+Lastly, upload the file Receipt_JaneDoe.cpp (or the Receipt_JaneDoe.txt).
+Happy Coding!
