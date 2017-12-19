@@ -114,11 +114,11 @@ int main()
       // get cin at least once till it's an int or the end
       do
       {
-         getline(cin, rowStr);
+         // use cin instead of getline for char
+         cin >> rowStr;
 
-         // some issue with printing "Bad Data ("
          if(!(istringstream(rowStr) >> rowInt))
-            cout << rowStr << endl;
+            cout << "Bad Data (" << rowStr << "). Ignoring." << endl;
 
       }while(!(istringstream(rowStr) >> rowInt) && (!cin.eof()));
 
@@ -127,7 +127,7 @@ int main()
 
       do
       {
-         getline(cin, colStr);
+         cin >> colStr; 
 
          if(!(istringstream(colStr) >> colInt))
             cout << "Bad Data (" << colStr << "). Ignoring." << endl;
