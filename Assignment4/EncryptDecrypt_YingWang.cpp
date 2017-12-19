@@ -17,7 +17,7 @@ int main ( )
    {
       if ( key < -26 || key > 26 )
       {
-         cout << "Bad Key." << endl;
+         cout << "Bad key." << endl;
          return 1;
       }
       else
@@ -55,7 +55,7 @@ int main ( )
    }
    else 
    {
-      cout << "Bad Key." << endl;
+      cout << "Bad key." << endl;
       return 1;
    }
    return 0;
@@ -64,11 +64,11 @@ int main ( )
 /* 
 --- Run 1 --- 
 CindyWs:Assignment4 ying2ra$ ./a.out < BadKey1.txt
-Bad Key.
+Bad key.
 
 --- Run 2 ---
 CindyWs:Assignment4 ying2ra$ ./a.out < BadyKey2.txt
-Bad Key.
+Bad key.
 
 --- Run 3 ---
 CindyWs:Assignment4 ying2ra$ ./a.out < GettysburgAddress_Reverse.txt
