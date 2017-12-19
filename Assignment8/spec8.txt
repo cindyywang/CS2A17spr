@@ -1,0 +1,130 @@
+This assignment was locked Jun 14 at 11:59pm.
+In this assignment, we will use what we learned about Operator Overloading and Friend Functions to complete the implementation of the Tic Tac Toe game started in the last assignment.
+
+Class Definition
+
+For this assignment, you will make some minor changes to your class definition. The showGrid() and nextTurn() methods will get replaced with friend functions that overload operators << and ++. You will additionally add a new method called haveWinner() and add a return value to the method markSpot().
+
+Here is the updated class definition (changes in green):
+
+class TicTacToeGame
+{
+public:
+   TicTacToeGame();
+   // Initializes each spot to ' ' and first player to 1
+
+   TicTacToeGame(char initMark, int firstPlayer);
+   // Initializes each spot to initMark and first player to firstPlayer
+   // initMark can be '-' or ' ' and first player can be 1 or 2
+
+   ~TicTacToeGame();
+   // Called when object goes out of scope
+
+   friend ostream& operator <<(ostream& outs, const TicTacToeGame& game);
+   // Shows the current state of the tic tac toe 3x3 grid
+
+   friend void operator ++(TicTacToeGame& game);
+   // Switches the turn to the other player (prefix increment)
+
+   bool haveWinner() const;
+   // Returns true is game is won by current player
+
+   bool markSpot(int row, int col);
+   // Marks the spot (row,col) in 3x3 grid with the current player's mark
+   // Returns false in case of spot taken or bad row / col value, true otherwise.
+
+   char getEmptyMark() const;
+   // Gets the empty mark
+
+   int getNextPlayer() const;
+   // Next player to play
+
+   static int getNumActiveGames();
+   // Number of active tic tac toe games
+
+private:
+   // fill in your data representation and any helper methods here
+};
+Operator Overloaded Friend Functions
+
+We will replace the method showGrid() with a friend function that overloads the << operator. This will allow you to output the current state of the grid by doing the following:
+
+TicTacToeGame game;
+...
+cout << game;
+Also we will replace the method nextTurn() with a friend function that overloads the ++ prefix operator. This will allow you to change turns by doing the following:
+
+++game;
+New Method haveWinner()
+
+We will create a new method haveWinner() that checks is the current player has won the game. The method returns true in this case, and false otherwise.  Note that this method should be called after markSpot() and before changing turns.
+
+Changes to markSpot()
+
+The markSpot() method should be changed to return true if it succeeds. It should return false if: 
+
+spot is already taken
+the row or column arguments are not in valid range
+Implement main()
+
+The actual playing of the game will be implemented by you in main(). It should alternate between players till either:
+
+a player wins, or 
+there is a draw, or
+end of file, in case of input redirection
+At each turn, you should:
+
+show the grid
+prompt for row and column. 
+It will look as below:
+
++---+---+---+
+| X |   |   |
++---+---+---+
+| O | X | X |
++---+---+---+
+| O |   |   |
++---+---+---+
+Player 2 row: 3
+Player 2 col: 2
+
++---+---+---+
+| X |   |   |
++---+---+---+
+| O | X | X |
++---+---+---+
+| O | O |   |
++---+---+---+
+Player 1 row: 
+At the end of game print:
+
+Game over.
+If there is a winner, additionally show:
+
+Player 2 wins!
+Game over.
+Error Checking
+
+Note that we will never call exit(1), but simply ignore the bad data and prompt for input again.
+
+The three error messages to use are (look at sample output file below for details):
+
+Bad Data (a). Ignoring.
+Bad spot: (4, 2). Ignoring.
+Spot (1, 1) taken. Ignoring.
+Sample Input
+
+Run your program with input redirection from the following 3 sample files:
+
+game1.txtPreview the documentView in a new window - a game where player 1 wins; expected output is game1-output.txtPreview the documentView in a new window
+game2.txtPreview the documentView in a new window - a game leading to a draw; expected output is game2-output.txtPreview the documentView in a new window
+game3.txt Preview the documentView in a new window- a game with a few input errors but where player 2 ultimately wins; expected output is game3-output.txtPreview the documentView in a new window
+Submission
+
+Include all the requirements mentioned above in your code.
+Comment your code appropriately.
+Use correct indentation.
+Minimize repeated code.
+Include the output of the 3 sample input files in a comment section at the bottom of your code.
+Lastly, upload the file TicTacToeGame_[your name].cpp .
+Happy Coding!
