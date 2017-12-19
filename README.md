@@ -2,7 +2,7 @@
 Assignments and lecture notes
 
 Assignments
-1. Cout
+1. Cout and Arithmatic Calculation 
 2. Receipt
 3. MathQuiz with Rand
 4. EncryptDecrypt
