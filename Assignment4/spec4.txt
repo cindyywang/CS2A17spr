@@ -1,0 +1,81 @@
+This assignment was locked May 17 at 11:59pm.
+The goal of this assignment is to use what you have learned about loops to create a program to encrypt and decrypt messages.
+
+Like Julius Ceasar, we will use a simple cipher to encrypt and decrypt messages. Not surprisingly, the approach he used is now called the Ceasar Cipher (Links to an external site.)Links to an external site.. In this cipher, each letter is replaced by another letter a fixed number of places away.  Julius Ceasar used a shift of 3. So in his personal messages, 'a' was replaced with 'd', 'm' with 'p', and 'y' with 'b' (note the rotating shift).
+
+Note that the same program can be used to either encrypt or decrypt. If the message text is encrypted with a shift of some number N, applying the negative shift, -N, will decrypt the encrypted message. 
+
+Please do the following:
+
+Your submitted program file should be called EncryptDecrypt_[YourName].cpp file; so if your name is Jane, the file is EncryptDecrypt_Jane.cpp.
+For this assignment, you will need to run the program from the cmd window (Windows) or Terminal (Mac). On Windows your executable program is typically in the folder Documents\Visual Studio 2017\Projects\<your project>\Debug. On Mac it is typically in Library/Developer/Xcode/DerivedData/<your app>-<some id>/Build/Products/Debug.
+The program will take two inputs: the key (shift) and the text.
+The first line of the input is the key (shift), a positive or negative integer; the rest of the lines are the text to be transformed.
+For example, if the input uses a key (shift) of 19, followed by the first paragraph of the Gettysburg address to be encrypted as below
+19
+Four score and seven years ago our fathers brought forth on this continent, 
+a new nation, conceived in Liberty, and dedicated to the proposition that all 
+men are created equal.
+the output of this encryption will be:
+
+yhnk lvhkx tgw lxoxg rxtkl tzh hnk ytmaxkl ukhnzam yhkma hg mabl vhgmbgxgm,
+t gxp gtmbhg, vhgvxboxw bg ebuxkmr, tgw wxwbvtmxw mh max ikhihlbmbhg matm tee
+fxg tkx vkxtmxw xjnte.
+As discussed in class, we will use redirection for input. So, if input.txt contains the key and text, the program is run as follows (note that 'type' is a windows command to list the contents of a file; 'cat' is similar command on Mac):
+C:\Projects\EncryptDecrypt\Debug> type input.txt
+19
+Four score and seven years ago our fathers brought forth on this continent,
+a new nation, conceived in Liberty, and dedicated to the proposition that all
+men are created equal.
+C:\Projects\EncryptDecrypt\Debug> EncryptDecrypt_Jane.exe < input.txt
+yhnk lvhkx tgw lxoxg rxtkl tzh hnk ytmaxkl ukhnzam yhkma hg mabl vhgmbgxgm,
+t gxp gtmbhg, vhgvxboxw bg ebuxkmr, tgw wxwbvtmxw mh max ikhihlbmbhg matm tee
+fxg tkx vkxtmxw xjnte.
+Similarly, we can reverse the process by putting the reverse key (-19) and encrypted text in another file called reverse.txt as follows:
+C:\Projects\EncryptDecrypt\Debug> type reverse.txt
+-19
+yhnk lvhkx tgw lxoxg rxtkl tzh hnk ytmaxkl ukhnzam yhkma hg mabl vhgmbgxgm,
+t gxp gtmbhg, vhgvxboxw bg ebuxkmr, tgw wxwbvtmxw mh max ikhihlbmbhg matm tee
+fxg tkx vkxtmxw xjnte.
+C:\Projects\EncryptDecrypt\Debug> EncryptDecrypt_Jane.exe < reverse.txt
+four score and seven years ago our fathers brought forth on this continent,
+a new nation, conceived in liberty, and dedicated to the proposition that all
+men are created equal.
+
+Convert any Capital letters to lowercase before transforming.
+Transform only Alphabets. So, ignore any numbers, punctuation, spaces, etc.
+Check that the key is a number. If not, print "Bad key." and exit with code 1 (i.e. use "return 1;").
+Check that the key is valid (between -26 and 26). If not, print "Bad key." and exit with code 1 (i.e. use "return 1;").
+As discussed in class, you can use getline() to read a complete line as a string as below:
+#include <string>
+string str;
+getline(cin, str);
+getline() will return true if input was available or false in case of end of file
+
+As discussed in class, you can use istringstream() to convert a string to a number as below:
+#include <sstream>
+int num;
+if (istringstream(str) >> num)
+   cout << "got a num: " << num;
+else
+   cout << "not a number!";
+As discussed in class, you can use isalpha() to check if a character is an alphabet and tolower() to convert it to lowercase as below:
+char myChar = 'A';
+if (isalpha(myChar))
+   cout << "it's an alphabet!";
+myChar = tolower(myChar); // myChar is now 'a'
+TIP: You will need to use the mod (%) operator to handle a shift past the end of alphabet; we will discuss this in class.
+TIP: You will need to convert a negative shift into the corresponding positive shift; we will discuss this in class.
+Test your program with the sample input files GettysburgAddress.txtPreview the documentView in a new window, IHaveADream.txtPreview the documentView in a new window. Corresponding files to be decrypted are GettysburgAddress_Reverse.txtPreview the documentView in a new window, IHaveADream_Reverse.txtPreview the documentView in a new window.
+Comment your code appropriately.
+Choose the right data types (int, doubles, strings, constants, etc.).
+Use correct indentation.
+Minimize repeated code.
+Include the output of following in a comment section at the bottom of you source file:
+BadKey1.txtPreview the documentView in a new window
+BadKey2.txtPreview the documentView in a new window
+GettysburgAddress_Reverse.txtPreview the documentView in a new window
+IHaveADream.txtPreview the documentView in a new window
+Special_Reverse.txtPreview the documentView in a new window
+Lastly, upload the file EncryptDecrypt_Jane.cpp.
+Happy Coding!
