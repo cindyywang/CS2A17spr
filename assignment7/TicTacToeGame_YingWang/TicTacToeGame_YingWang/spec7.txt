@@ -1,0 +1,146 @@
+This assignment was locked Jun 7 at 11:59pm.
+In this assignment, we will use what we learned about Abstract Data Types and Object-Oriented Programming to define a class that implements the beginnings of a Tic Tac Toe game.
+
+Tic Tac Toe consists of a 3x3 grid and has 2 players. The players take turns to mark spots on the grid with X or O.
+
+Class Definition
+
+For this assignment, you will implement a class by creating data representation and implementing a few methods.
+
+Here is the class definition that you will fill in:
+
+class TicTacToeGame
+{
+public:
+   TicTacToeGame();
+   // Initializes each spot to ' ' and first player to 1
+
+   TicTacToeGame(char initMark, int firstPlayer);
+   // Initializes each spot to initMark and first player to firstPlayer
+   // initMark can be '-' or ' ' and first player can be 1 or 2
+
+   void showGrid() const;
+   // Shows the current state tic tac toe 3x3 grid
+
+   void nextTurn();
+   // Switches the turn to the other player
+
+   void markSpot(int row, int col);
+   // Marks the spot (row,col) in 3x3 grid with the current player's mark
+
+   char getEmptyMark() const;
+   // Gets the empty mark
+
+   int getNextPlayer() const;
+   // Next player to play
+
+   static int getNumActiveGames();
+   // Number of active tic tac toe games
+
+   ~TicTacToeGame();
+   // Called when object goes out of scope
+
+private:
+ // fill in your data representation and any helper methods here
+};
+Data Representation
+
+You will need to create member variables to represent:
+
+3x3 grid
+mark used in an empty spot
+mark used by the first player (default value X)
+mark used by the second player (default value O)
+player who has next turn
+number of current active games (a static variable)
+Constructors
+
+There are two constructors for the class:
+
+The default constructor initializes the empty mark to ' ' and starting player to be 1.
+The other constructor takes the empty mark and starting player as parameters.
+Use an initialization section and constructor delegation (both discussed in class) here.
+
+Showing the Grid
+
+The method showGrid() is used to print the current state of the grid. You can use the characters '+', '-' and '|' to output the grid as follows: 
+
+ +---+---+---+
+ | X |   |   |
+ +---+---+---+
+ | O | X | X |
+ +---+---+---+
+ | O |   |   |
+ +---+---+---+
+Inline Functions
+
+We discussed inline functions in class. Define at least one method as an inline function. Note that getEmptyMark(), getNextPlayer(), and getNumActiveGames() can all easily be defined as inline functions.
+
+Static Member and Method
+
+Note that the member to track the number of active games is most naturally defined as a static variable (so it is is shared by all objects). This variable must be updated in the constructors and the destructor. Also, remember to initialize the static variable in the appropriate place.
+
+Similarly, note the method getNumActiveGames() is a static method.
+
+Error Checking
+
+The following values in parameters much be checked for validity:
+
+Empty mark - can only be ' ' or '-'
+Starting player - can only be 1 or 2 
+Row and column values - can only be 1, 2, or 3
+Additionally the method markSpot() must check if the spot being marked is already taken. 
+
+The exact error messages are below.
+
+Bad mark: #. Ignoring.
+Bad player number: 4. Ignoring.
+Bad spot: (4, 2). Ignoring.
+Spot (1, 1) taken. Ignoring.
+Note that we will never call exit(1), but simply ignore the bad data.
+
+Expected Output
+
+Include the following definition as your main() function in your program. 
+
+int main()
+{
+   TicTacToeGame myGame;
+
+   cout << "active games: " << TicTacToeGame::getNumActiveGames() << endl;
+   {
+      TicTacToeGame newGame('-', 2);
+      cout << "active games: " << TicTacToeGame::getNumActiveGames() << endl;
+      newGame.showGrid();
+      cout << "empty mark is : " << newGame.getEmptyMark()
+           << ", next player is: " << newGame.getNextPlayer() << endl;
+      TicTacToeGame badGame1('~', 1);
+      TicTacToeGame badGame2(' ', 5);
+      cout << "active games: " << TicTacToeGame::getNumActiveGames() << endl;
+   }
+   cout << "active games: " << TicTacToeGame::getNumActiveGames() << endl;
+ 
+   myGame.showGrid();
+   myGame.markSpot(1, 1);
+   myGame.nextTurn();
+   myGame.markSpot(2, 2);
+   myGame.showGrid();
+   myGame.nextTurn();
+   myGame.markSpot(2, 4);
+   myGame.markSpot(2, 2);
+   myGame.markSpot(1, 2);
+   myGame.showGrid();
+
+   return 0;
+}
+Submission
+
+Include all the requirements mentioned above in your code.
+Comment your code appropriately.
+Use correct indentation.
+Minimize repeated code.
+Include the output of your program in a comment section at the bottom of your code.
+Lastly, upload the file TicTacToeGame_[your name].cpp .
+Happy Coding!
+
+Previous Next
