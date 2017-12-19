@@ -1,0 +1,46 @@
+This assignment was locked Apr 26 at 11:59pm.
+Even though this is an extremely easy assignment, I want everyone to do it.   Let's all just focus on making sure we have the compiler working, the indentation perfect and the tabs out.  This will ensure you get the most points in your first assignment, which may come in handy down the road.  Make sure you have read and understood
+
+both Modules 1A and Module 1B this week, and
+Lab Homework Requirements
+before submitting this assignment. Hand in only one program, please. 
+
+Also, compile and run the "Hello World!" program from your first week's module. 
+
+ 
+
+Then, create a new program using the Hello World program as a starting point. You will add extra cout statements and some simple Math expressions to output a simple restaurant receipt.
+
+It should print the following when you run it:
+
+Server: [fill in with your first name]!
+Welcome to Pizza Antica
+Subtotal: 66.25
+Tax (8.75%): [fill in with tax calculation]
+Total: [fill in with total calculation]
+Fill in items in brackets with text or calculations:
+
+first bracket is the first name you use
+second bracket is the tax value and shows it (please use a calculation, and not simply print the value)
+third bracket calculates is the final total (please use a calculation, and not simply print the value)
+For the last two you will be mixing calculation and output which contrary to one of the style rules; it is OK for this assignment.
+
+Although the program is very simple and does not need comments, add a comment above each of the lines printing the tax and total calculations.
+
+Include the output at the bottom at program file in a comment as covered in the General Homework Requirements.
+
+ 
+
+Be careful about accepting the indentation that Visual C++, Xcode or any other IDE.  The IDE editor may try to sneak in tabs.  You know how to test to see whether that whitespace is a tab or three spaces, and you should restore any tabs to three spaces, manually as explained in the modules.
+
+Because this is the first assignment, I will summarize some rules from your handout "Homework Requirements."  You are responsible for every rule in that module so make a habit of always checking your assignment against the rules it contains.  Here are some of them:
+
+Hand in only one file as an attachment.
+Hand in a plain text file, preferably a .txt file.  Examples of unacceptable formats are .rtf, .pdf, .pic, .zip, .doc or .jpg files.
+Include both the source and the run.
+Remove all tabs as described in the modules.
+Obey the style rules as described in the modules.
+Make sure the run "matches" your source.  If the run you submit could not have come from the source you submit, it will be graded as if you did not hand in a run.
+Sorry for all the rules, but there is a reason for each, and they are all very easy to follow.
+
+Happy Coding!
