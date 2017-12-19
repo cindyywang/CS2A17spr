@@ -2,9 +2,11 @@
 #include <iomanip>
 using namespace std;
 
+static const int LIMIT = 250;
+
 int main()
 {
-   string word[250];
+   string word[LIMIT];
    int count = 0;
 
    //parse every word as an element in string array word 
@@ -12,7 +14,7 @@ int main()
    {
       string str;
       cin >> str;
-      if(count < 250)
+      if(count < LIMIT)
       {  
          //blindly change 1st char of every str to lower case
          str[0] = tolower(str[0]);
