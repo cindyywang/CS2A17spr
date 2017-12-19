@@ -60,7 +60,7 @@ private:
    NodePtr start = NULL;
    NodePtr end = NULL;
    // only 1 static no matter how many times it is called
-   static int size;
+   int size;
 };
 
 int DLinkedList:: size = 0;
