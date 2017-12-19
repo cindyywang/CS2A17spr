@@ -3,15 +3,16 @@
 #include <sstream>
 using namespace std;
 
+// read valid int of items
 bool readValid(int& num);
+// read valid double of items(in units)
 bool readValid(double& num);
+// print per item
 void showItem(string prodName, 
               double prodPrice, 
               double prodWeight, 
               double prodTotal);
-//comment here
 
-//more comment in the body
 int main()
 {  
    int items = 0;
@@ -61,14 +62,13 @@ int main()
                exit(1);
       }
       cout << endl;
+      // print total proir to any modification
       cout << "SUBTOTAL                       " << total << endl;
       saving = CLUBCARD * total;
       total -= saving;
       tax = TAXRATE * total;
       total -= tax;
       
-      //cout << endl;
-      //cout << "SUBTOTAL                       " << total << endl;
       cout << "CLUBCARD Saving 5%              " << saving << endl;
       cout << "TAX 8.75%                       " << tax << endl;
       cout << "TOTAL                          " << total << endl;
@@ -179,7 +179,7 @@ Captain Crunch                  7.00
 Wonder Bread                    4.50
   3.00 at 1.50
 
-SUBTOTAL                       12.22
+SUBTOTAL                       14.10
 CLUBCARD Saving 5%              0.71
 TAX 8.75%                       1.17
 TOTAL                          12.22
@@ -213,7 +213,7 @@ Granny Smith Apples             1.74
 Tillamook Greek Yogurt          6.00
   6.00 at 1.00
 
-SUBTOTAL                       28.26
+SUBTOTAL                       32.60
 CLUBCARD Saving 5%              1.63
 TAX 8.75%                       2.71
 TOTAL                          28.26
@@ -241,7 +241,7 @@ CHATAIGNES                      7.20
 CHOU FRISE                      5.67
   3.00 at 1.89
 
-SUBTOTAL                       31.15
+SUBTOTAL                       35.93
 CLUBCARD Saving 5%              1.80
 TAX 8.75%                       2.99
 TOTAL                          31.15
