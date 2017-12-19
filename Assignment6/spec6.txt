@@ -1,0 +1,100 @@
+This assignment was locked May 31 at 11:59pm.
+The goal of this assignment is to use what you have learned about C++ arrays to sort a set of words in ascending alphabetic order and show a histogram of word counts.
+
+For this, we will use a simple sorting technique called Bubble Sort (Links to an external site.)Links to an external site. discussed in class.
+
+Your program file will be called BubbleSortHistogram_[your name].cpp.
+
+Program Usage
+
+Here is an example of running the program on a small part of JFK's moon speech (Links to an external site.)Links to an external site.: 
+
+C:\> type JFK.txt
+We choose to go to the moon We choose to go to the moon in this decade
+and do the other things not because they are easy but because they are hard
+because that goal will serve to organize and measure the best of our energies
+and skills because that challenge is one that we are willing to accept one
+we are unwilling to postpone and one which we intend to win and the others too
+C:\> BubbleSortHistogram.exe < JFK.txt
+
+         accept: x
+            and: xxxxx
+            are: xxxx
+        because: xxxx
+           best: x
+            but: x
+      challenge: x
+         choose: xx
+         decade: x
+             do: x
+           easy: x
+       energies: x
+             go: xx
+           goal: x
+           hard: x
+             in: x
+         intend: x
+             is: x
+        measure: x
+           moon: xx
+            not: x
+             of: x
+            one: xxx
+       organize: x
+          other: x
+         others: x
+            our: x
+       postpone: x
+          serve: x
+         skills: x
+           that: xxx
+            the: xxxxx
+           they: xx
+         things: x
+           this: x
+             to: xxxxxxxx
+            too: x
+      unwilling: x
+             we: xxxxx
+          which: x
+           will: x
+        willing: x
+            win: x
+C:\>
+The program will be fairly short and is more of an algorithms exercise. Do not create any functions.
+
+You can think of program as having three parts.
+
+I - Reading Input
+
+You will be reading input from cin with redirection from a file as before. Do not add any special file handling code in the program.
+Recall that the following will read a single word into the variable str (if the user enters "hello there" at the terminal, str will only contain the first word "hello"):
+string str; 
+cin >> str;
+Also note that "cin.eof()" returns true if you are at the end of file; it returns false otherwise.
+Keep the words read in an array of type string. You can assume that there will never be more than 250 words. Show the error "Too many words." and exit with code 1 if the word count exceeds this value.
+You can also assume that the data does not contain any other symbols (e.g. comma, dash, period etc.), just alphabets.
+Fix any capitalized words so their first char is lowercase.
+II - Sorting
+
+Use bubble sort to sort words.
+Bubble sort is typically implemented with two nested for loops. Recall that with every iteration of the outer loop, another rightmost element is in the correct place. Thus, remember to adjust the loop limits.
+Note that as string itself is a special class. So, two strings be compared with relational operators (e.g. ">"). Also, strings can be copied with an assignment ("=") operator.
+III - Presenting the Histogram
+
+Having a sorted list allows you to easily print a histogram.
+Print the word right-justified in a field width of 15 chars. This is followed by a colon (":"). Lastly, print an "x" for every occurrence of the word.
+Do not create another array to store the histogram; instead print it as you are looping over the sorted array.
+Sample Input
+
+Sample input files are: JFK.txtPreview the documentView in a new window, IHaveADream.txtPreview the documentView in a new window, GettysburgAddress.txtPreview the documentView in a new window
+
+Submission
+
+Comment your code appropriately.
+Choose the right data types (int, doubles, strings, constants, etc.).
+Use correct indentation.
+Minimize repeated code.
+Include the output of each of the sample input files (in the order listed) in a comment section at the bottom of your code.
+Lastly, upload the file BubbleSortHistogram_[your name].cpp (no need to convert to txt).
+ Happy Coding!
