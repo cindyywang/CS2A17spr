@@ -199,3 +199,13 @@ Forwards:   [-865, -824, -820, -803, -678, -631, -540, -536, -436, -297, -103, -
 Backwards:  [746, 688, 638, 494, 494, 363, 322, 160, -57, -103, -297, -436, -536, -540, -631, -678, -803, -820, -824, -865]
 ```
 * [10. Search_Comparison](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment10/SortedList_YingWang.cpp) - Comparison between Linear and Binary Search with SortedList of input files
+```
+
+Loading words... 160085 read.
+Looking for word "testcase" with Linear Search
+Found at position: 119745
+Duration: 2350 microsecs
+Looking for word "testcase" with Binary Search
+Found at position: 119745
+Duration: 38 microsecs
+```
