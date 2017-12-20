@@ -103,6 +103,6 @@ TOTAL                          12.22
             win: x
 ```
 * [7. TicTacToeGame_I](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/assignment7/TicTacToeGame_YingWang.cpp) -  2 player TicTacToeGame with class and user input
-* [8. TicTacToeGame_II](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment8/TicTacToeGame_YingWang.cpp) - TicTacToeGame with operator overloading, friend function and input files
+* [8. TicTacToeGame_II](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment8/TicTacToeGame_YingWang.cpp) - TicTacToeGame with operator overloading, friend function and input files to detect valid input to mark
 * [9. DLinkedList](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment9/DLinkedList_YingWang.cpp) - Doubly LinkedList
 * [10. Search_Comparison](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment10/SortedList_YingWang.cpp) - Comparison between Linear and Binary Search with SortedList of input files
