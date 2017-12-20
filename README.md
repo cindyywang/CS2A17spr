@@ -104,5 +104,72 @@ TOTAL                          12.22
 ```
 * [7. TicTacToeGame_I](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/assignment7/TicTacToeGame_YingWang.cpp) -  2 player TicTacToeGame with class and user input
 * [8. TicTacToeGame_II](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment8/TicTacToeGame_YingWang.cpp) - TicTacToeGame with operator overloading, friend function and input files to detect valid input to mark
+```
+------------------------Sample Run------------------------
++---+---+---+
+|   |   |   |
++---+---+---+
+|   |   |   |
++---+---+---+
+|   |   |   |
++---+---+---+
+Player 1 row: Player 1 col:
+Bad spot: (1, 5). Ignoring.
+Player 1 row: Player 1 col:
++---+---+---+
+|   |   |   |
++---+---+---+
+|   |   |   |
++---+---+---+
+| X |   |   |
++---+---+---+
+Player 2 row: Player 2 col:
+Bad spot: (-3, 1). Ignoring.
+Player 2 row: Player 2 col:
++---+---+---+
+| O |   |   |
++---+---+---+
+|   |   |   |
++---+---+---+
+| X |   |   |
++---+---+---+
+Player 1 row: Bad Data (a). Ignoring.
+Player 1 col:
++---+---+---+
+| O | X |   |
++---+---+---+
+|   |   |   |
++---+---+---+
+| X |   |   |
++---+---+---+
+Player 2 row: Player 2 col:
++---+---+---+
+| O | X |   |
++---+---+---+
+|   |   |   |
++---+---+---+
+| X |   | O |
++---+---+---+
+Player 1 row: Player 1 col:
++---+---+---+
+| O | X | X |
++---+---+---+
+|   |   |   |
++---+---+---+
+| X |   | O |
++---+---+---+
+Player 2 row: Player 2 col:
+Spot (1, 1) taken. Ignoring.
+Player 2 row: Player 2 col:
++---+---+---+
+| O | X | X |
++---+---+---+
+|   | O |   |
++---+---+---+
+| X |   | O |
++---+---+---+
+Player 2 wins!
+Game over.
+```
 * [9. DLinkedList](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment9/DLinkedList_YingWang.cpp) - Doubly LinkedList
 * [10. Search_Comparison](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment10/SortedList_YingWang.cpp) - Comparison between Linear and Binary Search with SortedList of input files
