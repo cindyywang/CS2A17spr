@@ -7,6 +7,18 @@ Assignments, spec of assignments and lecture notes
 * [1. Assignment1](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment1/assignment1.cpp) - Cout and Arithmatic Calculation with various data types
 * [2. Receipt](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment2/Receipt_YingWang.cpp) - Receipt with format
 * [3. MathQuiz](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment3/MathQuiz_YingWang.cpp) - Mathquiz with seeded rand, user interaction and switch cases
+```
+Welcome to Math Quiz
+What are we practicing?
+[1] Addition
+[2] Substraction
+[3] Multiplication
+[4] Division (quotient)
+[5] Division (remainder)
+Choice: 5
+What is the remainder for 8 / 10? 8
+That is exactly right!
+```
 * [4. EncryptDecrypt](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment4/EncryptDecrypt_YingWang.cpp) - Cessar Encryption using getline with file input
 * [5. RobustReceipt](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment5/RobustReceipt_YingWang.cpp) - read and print receipt from input file with functions calls
 * [6. BubbleSortHistogram](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment6/BubbleSortHistogram_YingWang.cpp) - Bubblesort string of words and then print their count using histograms with input files 
