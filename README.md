@@ -1,5 +1,7 @@
 # CS2A "OBJECT-ORIENTED PROGRAMMING METHODOLOGIES IN C++":
+```
 Assignments, spec of assignments and lecture notes
+```
 
 Assignments
 * [1. Assignment1](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment1/assignment1.cpp) - Cout and Arithmatic Calculation with various data tyoes
