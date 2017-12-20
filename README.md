@@ -173,6 +173,7 @@ Game over.
 ```
 * [9. DLinkedList](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment9/DLinkedList_YingWang.cpp) - Doubly LinkedList
 ```
+------------------------------------------------Sample Run------------------------------------------------
 Adding   363: [363]
 Adding  -103: [-103, 363]
 Adding   494: [-103, 363, 494]
@@ -200,7 +201,7 @@ Backwards:  [746, 688, 638, 494, 494, 363, 322, 160, -57, -103, -297, -436, -536
 ```
 * [10. Search_Comparison](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment10/SortedList_YingWang.cpp) - Comparison between Linear and Binary Search with SortedList of input files
 ```
-
+------------------------Sample Run------------------------
 Loading words... 160085 read.
 Looking for word "testcase" with Linear Search
 Found at position: 119745
