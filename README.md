@@ -8,6 +8,7 @@ Assignments, spec of assignments and lecture notes
 * [2. Receipt](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment2/Receipt_YingWang.cpp) - Receipt with format
 * [3. MathQuiz](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment3/MathQuiz_YingWang.cpp) - Mathquiz with seeded rand, user interaction and switch cases
 ```
+---Sample Run---
 Welcome to Math Quiz
 What are we practicing?
 [1] Addition
