@@ -4,8 +4,8 @@ Assignments, spec of assignments and lecture notes
 ```
 
 ## Assignments
-* [1. Assignment1](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment1/assignment1.cpp) - Cout and Arithmatic Calculation with various data tyoes
-1. Cout and Arithmatic Calculation 
+* [1. Assignment1](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment1/assignment1.cpp) - Cout and Arithmatic Calculation with various data types
+* [2. Receipt](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment2/Receipt_YingWang.cpp) - 
 2. Receipt
 3. MathQuiz with Rand
 4. EncryptDecrypt
