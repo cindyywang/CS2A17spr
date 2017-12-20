@@ -35,6 +35,23 @@ and random chars: (*&%@^#)
 great job.
 ```
 * [5. RobustReceipt](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment5/RobustReceipt_YingWang.cpp) - read and print receipt from input file with functions calls
+```
+------------------------------------
+SaveMart Receipt
+123 Main Street
+San Jose CA 95135
+Honey Crisp Apples              2.60
+  2.00 at 1.30
+Captain Crunch                  7.00
+  2.00 at 3.50
+Wonder Bread                    4.50
+  3.00 at 1.50
+SUBTOTAL                       14.10
+CLUBCARD Saving 5%              0.71
+TAX 8.75%                       1.17
+TOTAL                          12.22
+------------------------------------
+```
 * [6. BubbleSortHistogram](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment6/BubbleSortHistogram_YingWang.cpp) - Bubblesort string of words and then print their count using histograms with input files 
 * [7. TicTacToeGame_I](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/assignment7/TicTacToeGame_YingWang.cpp) -  2 player TicTacToeGame with class and user input
 * [8. TicTacToeGame_II](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment8/TicTacToeGame_YingWang.cpp) - TicTacToeGame with operator overloading, friend function and input files
