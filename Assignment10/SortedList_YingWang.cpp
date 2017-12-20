@@ -40,14 +40,10 @@ public:
    // return -1 if not found
 
 private:
- // your data representation and any helper functions
- // to capture the memory address where the string array is allocated in heap
- string* arrayStr = NULL;
- int length, middle, distance, divide, left, right, lens = 0;
- int resultBi, resultLi = -1;
- const int TWO = 2;
- bool oddLength = true;
- string input, middleWord, leftWord, rightWord, element = "";
+   // your data representation and any helper functions
+   // to capture the memory address where the string array is allocated in heap
+   string* arrayStr = NULL;
+   int length = 0;
 };
 
 // ---------------------
@@ -112,6 +108,7 @@ void SortedList::load()
 {
    // getline caused problem because it take the entire line
    // cin >> input is a bool
+   string input = "";
    while(cin >> input)
    {
       arrayStr[length] = input;
@@ -124,150 +121,110 @@ void SortedList::load()
 int SortedList::linearSearch(string data)
 {
    // from index 0 to length - 1
+   int result = -1;
    for(int i = 0; i < length; i++)
    {
       if(arrayStr[i] == data)
       {
-         resultLi = i;
+         result = i;
          break;
       }
    }
-   return resultLi;
+   return result;
 }
 
 // recursion for binary search
 int SortedList::binarySearch(string data, int first, int last)
 {
-   // how far from the end of the first index to the end of the last index
-   // distance = length - 1
-   distance = last - first;
-
-   // check whether the length is odd
-   if(distance % TWO != 0)
-
-      oddLength = false;
-   // keep updating every call
-   else
-      oddLength = true;
-
-   // if length is odd, we have middleWord
-   if(oddLength) {
-      // based on first plus half of the distance
-      middle = first + (distance / TWO);
-      middleWord = arrayStr[middle];
-
-      // Case1.1 middleWord is data
-      if(middleWord == data)
-         resultBi = middle;
-      // Case1.2(Base case 1) after check middleWord is not data
-      // And there's only 1 element left, return not found
-      else if(distance == 0)
-         resultBi = -1;
-      // Case1.3 If middleWord is bigger than data, move to the left
-      else if(middleWord > data)
-         resultBi = binarySearch(data, first, (middle - 1));
-      // Case1.4 Vice versa
-      else if(middleWord < data)
-         resultBi = binarySearch(data, (middle + 1), last);
-
+   int result = -1;
+   int mid = 0; 
+   if(first > last) {
+      return result;
+   } else {
+      mid = first + (last - first)/2;
    }
-   //for even length
-   else
+
+   if(arrayStr[mid] > data)
    {
-      lens = distance + 1;
-      // divide points to the right of the middle
-      divide = lens / TWO;
-      // never forget it's based on first
-      left = first + divide - 1;
-      right = first + divide;
-      leftWord = arrayStr[left];
-      rightWord = arrayStr[right];
-      // Case2.1 leftWord is data
-      if(leftWord == data)
-         resultBi = left;
-      // Case 2.2 rightWord is data
-      else if(rightWord == data)
-         resultBi = right;
-      // Case 2.3(Base Case 2) after check both the left and right are not data
-      // And there are only two elements left, return not found
-      else if(length == TWO)
-         resultBi = -1;
-      // 2.4 Even the leftWord is bigger than data, move to the left
-      else if(leftWord > data)
-         resultBi = binarySearch(data, first, left - 1);
-      // 2.5 Vice versa
-      else if(rightWord < data)
-         resultBi = binarySearch(data, right + 1, last);
+      result = binarySearch(data, first, mid - 1);
    }
-   // return everytime recursively called
-   return resultBi;
+   else if(arrayStr[mid] < data)
+   {
+      result = binarySearch(data, mid + 1, last);
+   }
+   else if(arrayStr[mid] == data)
+   {
+      result = mid;
+   }
+  
+   return result;
 }
 
 /*
 --- Run 1 ---
-$ SortedList < SortedDracula.txt
+$ SortedList_YingWang < SortedDracula.txt
 
 Loading words... 160085 read.
 
 Looking for word "testcase" with Linear Search
 Found at position: 119745
-Duration: 3795 microsecs
+Duration: 2350 microsecs
 
 Looking for word "testcase" with Binary Search
 Found at position: 119745
-Duration: 250 microsecs
+Duration: 38 microsecs
 
 --- Run 2 ---
-$ SortedList < SortedCallOfTheWild.txt
+$ SortedList_YingWang < SortedCallOfTheWild.txt
 
 Loading words... 31854 read.
 
 Looking for word "testcase" with Linear Search
 Found at position: 23349
-Duration: 676 microsecs
+Duration: 552 microsecs
 
 Looking for word "testcase" with Binary Search
 Found at position: 23349
-Duration: 57 microsecs
+Duration: 47 microsecs
 
 --- Run 3 ---
-$ SortedList < SortedAladdinAndLamp.txt
+$ SortedList_YingWang < SortedAladdinAndLamp.txt
 
 Loading words... 5279 read.
 
 Looking for word "testcase" with Linear Search
 Found at position: 3890
-Duration: 140 microsecs
+Duration: 134 microsecs
 
 Looking for word "testcase" with Binary Search
 Found at position: 3890
-Duration: 76 microsecs
+Duration: 40 microsecs
 
 --- Run 4 ---
-$ SortedList < Sorted20Words.txt
+$ SortedList_YingWang < Sorted20Words.txt
 
 Loading words... 20 read.
 
 Looking for word "testcase" with Linear Search
 Found at position: 15
-Duration: 4 microsecs
+Duration: 7 microsecs
 
 Looking for word "testcase" with Binary Search
 Found at position: 15
-Duration: 15 microsecs
+Duration: 19 microsecs
 
 --- Run 5 ---
-$ SortedList < SortedNotFound.txt
+$ SortedList_YingWang < SortedNotFound.txt
 
 Loading words... 19 read.
 
 Looking for word "testcase" with Linear Search
 Found at position: -1
-Duration: 3 microsecs
+Duration: 8 microsecs
 
 Looking for word "testcase" with Binary Search
 Found at position: -1
-Duration: 20 microsecs
+Duration: 18 microsecs
 
 ========================= Analysis ====================================================
 Q1. Which algorithm performed better?
