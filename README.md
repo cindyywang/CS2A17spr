@@ -12,5 +12,5 @@ Assignments, spec of assignments and lecture notes
 * [6. BubbleSortHistogram](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment6/BubbleSortHistogram_YingWang.cpp) - Bubblesort string of words and then print their count using histograms with input files 
 * [7. TicTacToeGame_I](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/assignment7/TicTacToeGame_YingWang.cpp) -  2 player TicTacToeGame with class and user input
 * [8. TicTacToeGame_II](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment8/TicTacToeGame_YingWang.cpp) - TicTacToeGame with operator overloading, friend function and input files
-9. Doubly LinkedList
-10. Linear and Binary Search
+* [9. DLinkedList](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment9/DLinkedList_YingWang.cpp) - Doubly LinkedList
+* [10. Search_Comparison](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment10/SortedList_YingWang.cpp) - Comparison between Linear and Binary Search with SortedList of input files
