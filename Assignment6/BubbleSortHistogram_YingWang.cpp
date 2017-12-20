@@ -78,7 +78,7 @@ int main()
 
 /* 
 --- Run 1 ---
-CindyWs:Assignment6 ying2ra$ ./a.out < JFK.txt
+CindyWs:Assignment6 ying2ra$ ./BubbleSortHistogram_YingWang < JFK.txt
          accept: x
             and: xxxxx
             are: xxxx
@@ -124,7 +124,7 @@ CindyWs:Assignment6 ying2ra$ ./a.out < JFK.txt
             win: x
             
 --- Run 2 ---
-CindyWs:Assignment6 ying2ra$ ./a.out < IHaveADream.txt
+CindyWs:Assignment6 ying2ra$ ./BubbleSortHistogram_YingWang < IHaveADream.txt
               a: xxxxxxxxxxx
            able: xx
         alabama: xx
@@ -243,7 +243,7 @@ CindyWs:Assignment6 ying2ra$ ./a.out < IHaveADream.txt
             you: x
             
 --- Run 3 ---
-CindyWs:Assignment6 ying2ra$ ./a.out < GettysburgAddress.txt
+CindyWs:Assignment6 ying2ra$ ./BubbleSortHistogram_YingWang < GettysburgAddress.txt
 Too many words.
 
 */
