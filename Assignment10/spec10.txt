@@ -1,0 +1,141 @@
+This assignment was locked Jun 28 at 11:59pm.
+In this assignment, we will use what we learned about Recursion and Search to implement Linear and Binary Search of a sorted list. 
+
+SortedList Class
+
+You will define a class called SortedList. You will implement the class by creating the data representation and implementing a few methods.
+
+Here is the class declaration that you will implement:
+
+class SortedList
+{
+public:
+   SortedList(int size);
+   // create a list with storage size
+
+   ~SortedList();
+   // release list storage
+
+   int getLength() const;
+   // length of list
+
+   void load();
+   // loads pre-sorted words from cin till eof
+
+   int linearSearch(string data);
+   // returns location of an occurrence of data
+   // using linear search; location is between 0 and length-1
+   // return -1 if not found
+
+   int SortedList::binarySearch(string data, int first, int last);
+   // returns location of an occurrence of data between 
+   // indexes first and last using binary search; 
+   // location is between 0 and length-1
+   // return -1 if not found
+
+private:
+ // your data representation and any helper functions
+};
+Data Representation
+
+You will use an array of strings to represent the list. You will need to use dynamic memory allocation (i.e. new) in the constructor to allocate an array of the size specified. Similarly, you will need to de-allocate the array memory in the destructor. 
+
+Load Data
+
+The load() method simply loads a list of words from standard input. The words are already pre-sorted and you do not need to sort them.
+
+Search Methods
+
+The central part of the assignment is the implementation of two search methods.
+
+The method linearSearch() looks for the word in the parameter data using a simple linear search over the input list.
+
+The method binarySearch() looks for the word in the parameter data using recursion to implement binary search.
+
+Main Function
+
+Include the following definition as your main() function in your program. Note that we use the chrono package to measure the speed of linear and binary search in microseconds. In each case, we look for the word "testcase" in the input list.
+
+#include <iostream>
+#include <string>
+#include <chrono>
+
+using namespace std;
+using namespace std::chrono;
+
+// put the class definition here
+
+// ---------------------
+// Main (driver)
+// ---------------------
+int main()
+{
+   SortedList myList(200000);
+   int pos;
+
+   // load words from standard input
+   cout << endl << "Loading words... ";
+   myList.load();
+   cout << myList.getLength() << " read." << endl << endl;
+
+   // Linear Search
+   cout << "Looking for word \"testcase\" with Linear Search" << endl;
+ 
+   // start clock
+   auto start = high_resolution_clock::now();
+   // call linear search
+   pos = myList.linearSearch("testcase");
+   // stop clock and compute duration
+   auto elapsed = high_resolution_clock::now() - start;
+   auto microseconds = duration_cast<chrono::microseconds>(elapsed).count();
+
+   cout << "Found at position: " << pos << endl;
+   cout << "Duration: " << microseconds << " microsecs" << endl;
+   cout << endl;
+
+   // Binary Search
+   cout << "Looking for word \"testcase\" with Binary Search" << endl;
+
+   // start clock
+   start = high_resolution_clock::now();
+   // call binary search
+   pos = myList.binarySearch("testcase", 0, myList.getLength()-1);
+   // stop clock and compute duration
+   elapsed = high_resolution_clock::now() - start;
+   microseconds = duration_cast<chrono::microseconds>(elapsed).count();
+
+   cout << "Found at position: " << pos << endl;
+   cout << "Duration: " << microseconds << " microsecs" << endl;
+
+   return 0;
+}
+Sample Input
+
+Run your program with input redirection from the following 5 pre-sorted sample files where word "testcase" has been inserted by me in 4 of the files:
+
+SortedDracula.txtPreview the documentView in a new window - Contains 160,085 words from the book Dracula (Links to an external site.)Links to an external site.
+
+SortedCallOfTheWild.txtPreview the documentView in a new window - Contains 31,854 words from the book Call of the Wild (Links to an external site.)Links to an external site.
+
+SortedAladdinAndLamp.txtPreview the documentView in a new window - Contains 5,279 words from the story Aladdin and the Wonderful Lamp (Links to an external site.)Links to an external site.
+
+Sorted20Words.txtPreview the documentView in a new window - Contains 20 arbitrary words ("testcase" included)
+
+SortedNotFound.txtPreview the documentView in a new window - Contains 19 arbitrary words ("testcase" not included)
+
+ Analysis
+
+In a comment section of the program files answer the following questions:
+
+Which algorithm performed better?
+How does the time taken by each algorithm grow?
+When does the linear search perform better?
+Submission
+
+Include all the requirements mentioned above in your code.
+Comment your code appropriately.
+Use correct indentation.
+Minimize repeated code.
+Include the output of your program with the 5 sample files and the answers to the analysis questions in a comment section at the bottom of your code.
+Lastly, upload the file SortedList_[your name].cpp .
+Happy Coding!
