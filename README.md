@@ -8,7 +8,7 @@ Assignments, spec of assignments and lecture notes
 * [2. Receipt](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment2/Receipt_YingWang.cpp) - Receipt with format
 * [3. MathQuiz](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment3/MathQuiz_YingWang.cpp) - Mathquiz with seeded rand, user interaction and switch cases
 ```
----Sample Run---
+------------------------Sample Run------------------------
 Welcome to Math Quiz
 What are we practicing?
 [1] Addition
@@ -21,6 +21,19 @@ What is the remainder for 8 / 10? 8
 That is exactly right!
 ```
 * [4. EncryptDecrypt](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment4/EncryptDecrypt_YingWang.cpp) - Cessar Encryption using getline with file input
+```
+------------------------Sample Run------------------------
+if you are reading this, your program works!
+... congratulations!
+if you did this right:
+you ignored
+dashes: (- -- ---),
+tabs here: (   ,  ,  ,  )
+the four space here: ( , , , )
+two new lines below:
+and random chars: (*&%@^#)
+great job.
+```
 * [5. RobustReceipt](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment5/RobustReceipt_YingWang.cpp) - read and print receipt from input file with functions calls
 * [6. BubbleSortHistogram](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment6/BubbleSortHistogram_YingWang.cpp) - Bubblesort string of words and then print their count using histograms with input files 
 * [7. TicTacToeGame_I](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/assignment7/TicTacToeGame_YingWang.cpp) -  2 player TicTacToeGame with class and user input
