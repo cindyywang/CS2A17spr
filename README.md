@@ -36,6 +36,7 @@ great job.
 ```
 * [5. RobustReceipt](https://github.com/cindyywang/CS2A_methology_17spr/blob/master/Assignment5/RobustReceipt_YingWang.cpp) - read and print receipt from input file with functions calls
 ```
+------------------------Sample Run------------------------
 ------------------------------------
 SaveMart Receipt
 123 Main Street
